@@ -1,13 +1,13 @@
 <div align="center">
   <h1>Pinlens</h1>
-  <p>macOS 屏幕区域实时放大工具</p>
+  <p>macOS 屏幕区实时预览工具</p>
   
   [![macOS](https://img.shields.io/badge/macOS-15.0%2B-blue.svg)](https://developer.apple.com/macos)
 </div>
 
 ## 概述
 
-Pinlens 是一款强大的 macOS 屏幕区域捕获和实时查看应用，允许你选择屏幕上的任意区域并在独立窗口中实时显示该区域的内容。支持缩放、标尺、网格、辅助线等多种专业辅助工具，是 UI 设计、开发调试、内容创作的得力助手。
+Pinlens 是一款强大的 macOS 屏幕区域实时预览工具，允许你选择屏幕上的任意区域并在独立窗口中实时显示该区域的内容。支持缩放、标尺、网格、辅助线等多种专业辅助工具，是 UI 设计、开发调试、内容创作的得力助手。
 
 ## 核心功能
 

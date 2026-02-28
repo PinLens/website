@@ -46,17 +46,17 @@
     "chinese": "中文"
   },
   "hero": {
-    "badge": "✨ macOS 屏幕区域捕获工具",
-    "title": "屏幕区域捕获与",
-    "titleHighlight": "实时查看",
-    "description": "Pinlens 是一款强大的 macOS 屏幕区域捕获和实时查看应用。",
-    "descriptionExtended": "支持缩放、标尺、网格、辅助线等多种专业辅助工具。",
+    "badge": "✨ MacOS 屏幕实时预览及缩放工具",
+    "title": "屏幕实时预览与",
+    "titleHighlight": "测量缩放",
+    "description": "Pinlens 是一款专为 MacOS 打造的专业级屏幕区域捕获与实时预览工具。",
+    "descriptionExtended": "内置多级缩放、标尺、网格系统、辅助线等专业辅助工具，助力高效工作。",
     "downloadNow": "立即下载"
   },
   "features": {
     "badge": "核心功能",
-    "title": "专业的屏幕捕获工具",
-    "description": "Pinlens 提供强大的屏幕区域捕获和实时预览功能，是 UI 设计、开发调试、内容创作的得力助手。",
+    "title": "专业的屏幕实时预览",
+    "description": "Pinlens 提供强大的屏幕实时预览及缩放测量功能，是 UI 设计、开发调试、内容创作的得力助手。",
     "areaSelection": {
       "name": "区域选择与实时预览",
       "description": "灵活拖拽选择任意屏幕区域，支持 8 方向调整大小和移动，实时显示选定区域内容。",
@@ -106,10 +106,10 @@
   },
   "system": {
     "badge": "系统要求",
-    "title": "为 macOS 设计",
-    "description": "Pinlens 专为 macOS Sonoma (15.0+) 设计，需要屏幕录制权限以提供最佳体验。",
+    "title": "为 MacOS 设计",
+    "description": "Pinlens 专为 MacOS Sonoma (15.0+) 设计，需要屏幕录制权限以提供最佳体验。",
     "version": {
-      "title": "macOS 15.0+",
+      "title": "MacOS 15.0+",
       "description": "需要 Sonoma 或更高版本"
     },
     "permission": {
@@ -119,7 +119,7 @@
   },
   "cta": {
     "title": "开始使用 Pinlens",
-    "description": "体验这款专为 macOS 设计的屏幕区域捕获工具，让 UI 设计、开发调试、内容创作变得更加高效。",
+    "description": "体验这款专为 MacOS 设计的屏幕实时预览及缩放测量工具，让 UI 设计、开发调试、内容创作变得更加高效。",
     "download": "立即下载"
   }
 }

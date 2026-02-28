@@ -46,17 +46,17 @@
     "chinese": "中文"
   },
   "hero": {
-    "badge": "✨ macOS Screen Area Capture Tool",
-    "title": "Screen Area Capture &",
-    "titleHighlight": "Real-time Preview",
-    "description": "Pinlens is a powerful macOS screen area capture and real-time preview application.",
-    "descriptionExtended": "Supports zoom, rulers, grids, guides and other professional auxiliary tools.",
+    "badge": "✨ macOS Screen Real-time Preview & Measurement Tool",
+    "title": "Screen Real-time Preview &",
+    "titleHighlight": "Measurement Zoom",
+    "description": "Pinlens is a professional-grade screen area capture and real-time preview tool built for macOS.",
+    "descriptionExtended": "Built-in multi-level zoom, rulers, grid system, guides and other professional auxiliary tools to boost productivity.",
     "downloadNow": "Download Now"
   },
   "features": {
     "badge": "Core Features",
-    "title": "Professional Screen Capture Tool",
-    "description": "Pinlens provides powerful screen area capture and real-time preview capabilities, making it an ideal assistant for UI design, development debugging, and content creation.",
+    "title": "Professional Screen Real-time Preview",
+    "description": "Pinlens provides powerful screen real-time preview and zoom measurement capabilities, making it an ideal assistant for UI design, development debugging, and content creation.",
     "areaSelection": {
       "name": "Area Selection & Real-time Preview",
       "description": "Flexibly drag to select any screen area, supports 8-direction resizing and moving, real-time display of selected area content.",
@@ -119,7 +119,7 @@
   },
   "cta": {
     "title": "Get Started with Pinlens",
-    "description": "Experience this screen area capture tool designed for macOS, making UI design, development debugging, and content creation more efficient.",
+    "description": "Experience this screen real-time preview and zoom measurement tool designed for macOS, making UI design, development debugging, and content creation more efficient.",
     "download": "Download Now"
   }
 }
