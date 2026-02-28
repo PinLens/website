@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimationContainer, MaxWidthWrapper } from "@/components";
 import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -9,8 +11,10 @@ import { PROCESS } from "@/utils";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n";
 
 const HomePage = () => {
+    const { t, locale } = useI18n();
     return (
         <div className="overflow-x-hidden scrollbar-hide size-full">
             {/* Hero Section */}
@@ -24,24 +28,24 @@ const HomePage = () => {
                             <span className="backdrop absolute inset-[1px] rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
                             <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/20"></span>
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1">
-                                ✨ macOS 屏幕区域捕获工具
+                                {t('hero.badge')}
                                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                             </span>
                         </button>
                         <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-                            屏幕区域捕获与 <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                                实时查看
+                            {t('hero.title')} <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
+                                {t('hero.titleHighlight')}
                             </span>
                         </h1>
                         <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
-                            Pinlens 是一款强大的 macOS 屏幕区域捕获和实时查看应用。
+                            {t('hero.description')}
                             <br className="hidden md:block" />
-                            <span className="hidden md:block">支持缩放、标尺、网格、辅助线等多种专业辅助工具。</span>
+                            <span className="hidden md:block">{t('hero.descriptionExtended')}</span>
                         </p>
                         <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
                             <Button asChild>
                                 <Link href="#" className="flex items-center">
-                                    立即下载
+                                    {t('hero.downloadNow')}
                                     <ArrowRightIcon className="w-4 h-4 ml-2" />
                                 </Link>
                             </Button>
@@ -75,18 +79,18 @@ const HomePage = () => {
             <MaxWidthWrapper className="pt-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-                        <MagicBadge title="核心功能" />
+                        <MagicBadge title={t('features.badge')} />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            专业的屏幕捕获工具
+                            {t('features.title')}
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Pinlens 提供强大的屏幕区域捕获和实时预览功能，是 UI 设计、开发调试、内容创作的得力助手。
+                            {t('features.description')}
                         </p>
                     </div>
                 </AnimationContainer>
                 <AnimationContainer delay={0.2}>
                     <BentoGrid className="py-8">
-                        {CARDS.map((feature, idx) => (
+                        {CARDS(t).map((feature, idx) => (
                             <BentoCard key={idx} {...feature} />
                         ))}
                     </BentoGrid>
@@ -97,17 +101,17 @@ const HomePage = () => {
             <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="使用流程" />
+                        <MagicBadge title={t('process.badge')} />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            简单 3 步开始使用
+                            {t('process.title')}
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            按照这些简单步骤，轻松开始使用 Pinlens 进行屏幕捕获和实时预览。
+                            {t('process.description')}
                         </p>
                     </div>
                 </AnimationContainer>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
-                    {PROCESS.map((process, id) => (
+                    {PROCESS(locale).map((process, id) => (
                         <AnimationContainer delay={0.2 * id} key={id}>
                             <MagicCard className="group md:py-8">
                                 <div className="flex flex-col items-start justify-center w-full">
@@ -117,10 +121,10 @@ const HomePage = () => {
                                             {id + 1}
                                         </span>
                                         <h3 className="text-base mt-6 font-medium text-foreground">
-                                            {process.title}
+                                            {t(`process.step${id + 1}.title`)}
                                         </h3>
                                         <p className="mt-2 text-sm text-muted-foreground">
-                                            {process.description}
+                                            {t(`process.step${id + 1}.description`)}
                                         </p>
                                     </div>
                                 </div>
@@ -134,12 +138,12 @@ const HomePage = () => {
             <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="系统要求" />
+                        <MagicBadge title={t('system.badge')} />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            为 macOS 设计
+                            {t('system.title')}
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Pinlens 专为 macOS Sonoma (15.0+) 设计，需要屏幕录制权限以提供最佳体验。
+                            {t('system.description')}
                         </p>
                     </div>
                 </AnimationContainer>
@@ -148,18 +152,18 @@ const HomePage = () => {
                         <MagicCard className="group">
                             <div className="flex flex-col items-start justify-center w-full">
                                 <div className="text-4xl mb-4">🍎</div>
-                                <h3 className="text-xl font-medium text-foreground">macOS 15.0+</h3>
+                                <h3 className="text-xl font-medium text-foreground">{t('system.version.title')}</h3>
                                 <p className="mt-2 text-sm text-muted-foreground">
-                                    需要 Sonoma 或更高版本
+                                    {t('system.version.description')}
                                 </p>
                             </div>
                         </MagicCard>
                         <MagicCard className="group">
                             <div className="flex flex-col items-start justify-center w-full">
                                 <div className="text-4xl mb-4">🎯</div>
-                                <h3 className="text-xl font-medium text-foreground">屏幕录制权限</h3>
+                                <h3 className="text-xl font-medium text-foreground">{t('system.permission.title')}</h3>
                                 <p className="mt-2 text-sm text-muted-foreground">
-                                    首次启动时需要授予权限
+                                    {t('system.permission.description')}
                                 </p>
                             </div>
                         </MagicCard>
@@ -173,14 +177,14 @@ const HomePage = () => {
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
                             <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                                开始使用 Pinlens
+                                {t('cta.title')}
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                体验这款专为 macOS 设计的屏幕区域捕获工具，让 UI 设计、开发调试、内容创作变得更加高效。
+                                {t('cta.description')}
                             </p>
                             <div className="mt-6">
                                 <Button>
-                                    立即下载
+                                    {t('cta.download')}
                                     <ArrowRightIcon className="w-4 h-4 ml-2" />
                                 </Button>
                             </div>

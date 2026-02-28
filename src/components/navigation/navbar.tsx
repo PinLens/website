@@ -10,16 +10,20 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { cn, NAV_LINKS } from "@/utils";
+import { cn } from "@/utils";
 import { LucideIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from 'react';
 import MaxWidthWrapper from "../global/max-width-wrapper";
 import MobileNavbar from "./mobile-navbar";
 import AnimationContainer from "../global/animation-container";
+import LanguageSwitcher from "@/components/language-switcher";
+import { useI18n } from "@/lib/i18n";
+import { NAV_LINKS } from "@/utils";
 
 const Navbar = () => {
     const [scroll, setScroll] = useState(false);
+    const { locale } = useI18n();
 
     const handleScroll = () => {
         if (window.scrollY > 8) {
@@ -35,6 +39,8 @@ const Navbar = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const navLinks = NAV_LINKS(locale);
 
     return (
         <header className={cn(
@@ -52,7 +58,7 @@ const Navbar = () => {
 
                         <NavigationMenu className="hidden lg:flex">
                             <NavigationMenuList>
-                                {NAV_LINKS.map((link) => (
+                                {navLinks.map((link) => (
                                     <NavigationMenuItem key={link.title}>
                                         {link.menu ? (
                                             <>
@@ -60,9 +66,9 @@ const Navbar = () => {
                                                 <NavigationMenuContent>
                                                     <ul className={cn(
                                                         "grid gap-1 p-4 md:w-[400px] lg:w-[500px] rounded-xl",
-                                                        link.title === "Features" ? "lg:grid-cols-[.75fr_1fr]" : "lg:grid-cols-2"
+                                                        link.title === "Features" || link.title === "功能" ? "lg:grid-cols-[.75fr_1fr]" : "lg:grid-cols-2"
                                                     )}>
-                                                        {link.title === "Features" && (
+                                                        {(link.title === "Features" || link.title === "功能") && (
                                                             <li className="row-span-4 pr-2 relative rounded-lg overflow-hidden">
                                                                 <div className="absolute inset-0 !z-10 h-full w-[calc(100%-10px)] bg-[linear-gradient(to_right,rgb(38,38,38,0.5)_1px,transparent_1px),linear-gradient(to_bottom,rgb(38,38,38,0.5)_1px,transparent_1px)] bg-[size:1rem_1rem]"></div>
                                                                 <NavigationMenuLink asChild className="z-20 relative">
@@ -71,10 +77,10 @@ const Navbar = () => {
                                                                         className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                                                                     >
                                                                         <h6 className="mb-2 mt-4 text-lg font-medium">
-                                                                            All Features
+                                                                            {link.title === "功能" ? "所有功能" : "All Features"}
                                                                         </h6>
                                                                         <p className="text-sm leading-tight text-muted-foreground">
-                                                                            Manage links, track performance, and more.
+                                                                            {link.title === "功能" ? "管理链接、追踪性能等" : "Manage links, track performance, and more."}
                                                                         </p>
                                                                     </Link>
                                                                 </NavigationMenuLink>
@@ -105,7 +111,10 @@ const Navbar = () => {
                             </NavigationMenuList>
                         </NavigationMenu>
 
-                    <MobileNavbar />
+                    <div className="flex items-center gap-4">
+                        <LanguageSwitcher />
+                        <MobileNavbar />
+                    </div>
                 </div>
                 </MaxWidthWrapper>
             </AnimationContainer>

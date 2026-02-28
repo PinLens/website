@@ -1,4 +1,5 @@
 import { Maximize2Icon, MousePointerClickIcon, RulerIcon } from "lucide-react";
+import type { Locale } from "@/lib/i18n";
 
 export const DEFAULT_AVATAR_URL = "https://api.dicebear.com/8.x/initials/svg?backgroundType=gradientLinear&backgroundRotation=0,360&seed=";
 
@@ -31,20 +32,20 @@ export const COMPANIES = [
     }
 ] as const;
 
-export const PROCESS = [
+export const PROCESS = (locale: Locale) => [
     {
-        title: "启动应用",
-        description: "应用启动后会在菜单栏显示图标，点击或按 Cmd+Ctrl+P 快速启动。",
+        title: locale === 'zh' ? "启动应用" : "Launch App",
+        description: locale === 'zh' ? "应用启动后会在菜单栏显示图标，点击或按 Cmd+Ctrl+P 快速启动。" : "After launching, app will display an icon in menu bar, click or press Cmd+Ctrl+P to launch quickly.",
         icon: Maximize2Icon,
     },
     {
-        title: "选择区域",
-        description: "拖拽创建选区，使用边角和边中间的控制点调整大小，点击确认。",
+        title: locale === 'zh' ? "选择区域" : "Select Area",
+        description: locale === 'zh' ? "拖拽创建选区，使用边角和边中间的控制点调整大小，点击确认。" : "Drag to create a selection area, use control points at corners and edges to adjust size, click to confirm.",
         icon: MousePointerClickIcon,
     },
     {
-        title: "查看内容",
-        description: "应用会创建一个新窗口显示选定区域的实时内容，可使用标尺、网格等工具。",
+        title: locale === 'zh' ? "查看内容" : "View Content",
+        description: locale === 'zh' ? "应用会创建一个新窗口显示选定区域的实时内容，可使用标尺、网格等工具。" : "The app will create a new window to display real-time content of selected area, with tools like rulers and grids available.",
         icon: RulerIcon,
     },
 ] as const;

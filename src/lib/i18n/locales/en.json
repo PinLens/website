@@ -1,0 +1,125 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "learnMore": "Learn More",
+    "dashboard": "Dashboard"
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "allFeatures": "All Features",
+    "allFeaturesDesc": "Manage links, track performance, and more.",
+    "linkShortening": "Link Shortening",
+    "linkShorteningDesc": "Create short, memorable links",
+    "qrCodes": "QR Codes",
+    "qrCodesDesc": "Generate QR codes for your links",
+    "analytics": "Analytics",
+    "analyticsDesc": "Track clicks and performance",
+    "passwordProtection": "Password Protection",
+    "passwordProtectionDesc": "Secure your links with passwords"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "integration": "Integration",
+    "integrations": "Integrations",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "copyright": "© {{year}} PinLens INC. All rights reserved."
+  },
+  "language": {
+    "switch": "Language",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "hero": {
+    "badge": "✨ macOS Screen Area Capture Tool",
+    "title": "Screen Area Capture &",
+    "titleHighlight": "Real-time Preview",
+    "description": "Pinlens is a powerful macOS screen area capture and real-time preview application.",
+    "descriptionExtended": "Supports zoom, rulers, grids, guides and other professional auxiliary tools.",
+    "downloadNow": "Download Now"
+  },
+  "features": {
+    "badge": "Core Features",
+    "title": "Professional Screen Capture Tool",
+    "description": "Pinlens provides powerful screen area capture and real-time preview capabilities, making it an ideal assistant for UI design, development debugging, and content creation.",
+    "areaSelection": {
+      "name": "Area Selection & Real-time Preview",
+      "description": "Flexibly drag to select any screen area, supports 8-direction resizing and moving, real-time display of selected area content.",
+      "cardTitle": "Area Selection",
+      "cardDescription": "Flexibly drag to select any screen area",
+      "label": "Screen Capture",
+      "placeholder": "Select screen area..."
+    },
+    "zoom": {
+      "name": "Zoom & Navigation",
+      "description": "Supports 0.5x - 10x zoom, mouse gesture zoom, real-time display of zoom level and viewport position.",
+      "cardTitle": "Zoom Control",
+      "cardDescription": "0.5x - 10x Stepless Zoom"
+    },
+    "designTools": {
+      "name": "Design Auxiliary Tools",
+      "description": "Toggleable horizontal/vertical rulers, custom guides, guide position adjustment and deletion.",
+      "cardTitle": "Rulers & Guides",
+      "cardDescription": "Professional design auxiliary tools",
+      "ruler": "📐 Ruler",
+      "guides": "📏 Guides",
+      "color": "🎨 Color"
+    },
+    "quickActions": {
+      "name": "Convenient Operations",
+      "description": "Lightweight menu bar application, quick launch with shortcuts, ESC key to quickly close selection overlay.",
+      "cardTitle": "Quick Actions",
+      "cardDescription": "Efficient workflow"
+    }
+  },
+  "process": {
+    "badge": "Workflow",
+    "title": "Get Started in 3 Simple Steps",
+    "description": "Follow these simple steps to easily start using Pinlens for screen capture and real-time preview.",
+    "step1": {
+      "title": "Launch App",
+      "description": "After launching, the app will display an icon in the menu bar, click or press Cmd+Ctrl+P to launch quickly."
+    },
+    "step2": {
+      "title": "Select Area",
+      "description": "Drag to create a selection area, use the control points at corners and edges to adjust size, click to confirm."
+    },
+    "step3": {
+      "title": "View Content",
+      "description": "The app will create a new window to display the real-time content of the selected area, with tools like rulers and grids available."
+    }
+  },
+  "system": {
+    "badge": "System Requirements",
+    "title": "Designed for macOS",
+    "description": "Pinlens is designed specifically for macOS Sonoma (15.0+), requires screen recording permission for the best experience.",
+    "version": {
+      "title": "macOS 15.0+",
+      "description": "Requires Sonoma or higher"
+    },
+    "permission": {
+      "title": "Screen Recording Permission",
+      "description": "Permission required on first launch"
+    }
+  },
+  "cta": {
+    "title": "Get Started with Pinlens",
+    "description": "Experience this screen area capture tool designed for macOS, making UI design, development debugging, and content creation more efficient.",
+    "download": "Download Now"
+  }
+}

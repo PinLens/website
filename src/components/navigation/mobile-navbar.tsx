@@ -17,14 +17,17 @@ import { cn, NAV_LINKS } from "@/utils";
 import { LucideIcon, Menu, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from 'react';
+import { useI18n } from "@/lib/i18n";
 
 const MobileNavbar = () => {
-
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const { locale, t } = useI18n();
 
     const handleClose = () => {
         setIsOpen(false);
     };
+
+    const navLinks = NAV_LINKS(locale);
 
     return (
         <div className="flex lg:hidden items-center justify-end">
@@ -43,12 +46,12 @@ const MobileNavbar = () => {
                     <div className="flex flex-col items-start w-full py-2 mt-10">
                         <div className="flex items-center justify-evenly w-full space-x-2">
                             <Link href="/dashboard" className={buttonVariants({ variant: "outline", className: "w-full" })}>
-                                Dashboard
+                                {t('common.dashboard')}
                             </Link>
                         </div>
                         <ul className="flex flex-col items-start w-full mt-6">
                             <Accordion type="single" collapsible className="!w-full">
-                                {NAV_LINKS.map((link) => (
+                                {navLinks.map((link) => (
                                     <AccordionItem key={link.title} value={link.title} className="last:border-none">
                                         {link.menu ? (
                                             <>

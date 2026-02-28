@@ -1,8 +1,13 @@
+"use client";
+
 import Link from 'next/link';
 import { AnimationContainer } from "@/components"
 import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+import { useI18n } from "@/lib/i18n";
 
 const Footer = () => {
+    const { t } = useI18n();
+
     return (
         <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
             <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
@@ -13,22 +18,22 @@ const Footer = () => {
                         <AnimationContainer delay={0.2}>
                             <div className="">
                                 <h3 className="text-base font-medium text-white">
-                                    Product
+                                    {t('footer.product')}
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground">
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Features
+                                            {t('footer.features')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Pricing
+                                            {t('footer.pricing')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Integration
+                                            {t('footer.integration')}
                                         </Link>
                                     </li>
                                 </ul>
@@ -37,27 +42,27 @@ const Footer = () => {
                         <AnimationContainer delay={0.3}>
                             <div className="mt-10 md:mt-0 flex flex-col">
                                 <h3 className="text-base font-medium text-white">
-                                    Integrations
+                                    {t('footer.integrations')}
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground">
                                     <li className="">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Facebook
+                                            {t('footer.facebook')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Instagram
+                                            {t('footer.instagram')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Twitter
+                                            {t('footer.twitter')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            LinkedIn
+                                            {t('footer.linkedin')}
                                         </Link>
                                     </li>
                                 </ul>
@@ -68,22 +73,22 @@ const Footer = () => {
                         <AnimationContainer delay={0.4}>
                             <div className="">
                                 <h3 className="text-base font-medium text-white">
-                                    Company
+                                    {t('footer.company')}
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground">
                                     <li className="">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            About Us
+                                            {t('footer.aboutUs')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="/privacy" className="hover:text-foreground transition-all duration-300">
-                                            Privacy Policy
+                                            {t('footer.privacyPolicy')}
                                         </Link>
                                     </li>
                                     <li className="mt-2">
                                         <Link href="/terms" className="hover:text-foreground transition-all duration-300">
-                                            Terms & Conditions
+                                            {t('footer.terms')}
                                         </Link>
                                     </li>
                                 </ul>
@@ -96,7 +101,7 @@ const Footer = () => {
             <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">
                 <AnimationContainer delay={0.6}>
                     <p className="text-sm text-muted-foreground mt-8 md:mt-0">
-                        &copy; {new Date().getFullYear()} PinLens INC. All rights reserved.
+                        {t('footer.copyright', { year: new Date().getFullYear() })}
                     </p>
                 </AnimationContainer>
             </div>
