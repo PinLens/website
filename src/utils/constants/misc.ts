@@ -1,4 +1,4 @@
-import { BarChart3Icon, FolderOpenIcon, WandSparklesIcon } from "lucide-react";
+import { Maximize2Icon, MousePointerClickIcon, RulerIcon } from "lucide-react";
 
 export const DEFAULT_AVATAR_URL = "https://api.dicebear.com/8.x/initials/svg?backgroundType=gradientLinear&backgroundRotation=0,360&seed=";
 
@@ -33,45 +33,45 @@ export const COMPANIES = [
 
 export const PROCESS = [
     {
-        title: "Organize Your Links",
-        description: "Efficiently categorize and tag your links for quick access and easy management.",
-        icon: FolderOpenIcon,
+        title: "启动应用",
+        description: "应用启动后会在菜单栏显示图标，点击或按 Cmd+Ctrl+P 快速启动。",
+        icon: Maximize2Icon,
     },
     {
-        title: "Shorten and Customize",
-        description: "Create concise, branded links that are easy to share and track.",
-        icon: WandSparklesIcon,
+        title: "选择区域",
+        description: "拖拽创建选区，使用边角和边中间的控制点调整大小，点击确认。",
+        icon: MousePointerClickIcon,
     },
     {
-        title: "Analyze and Optimize",
-        description: "Gain insights into link performance and optimize for better engagement.",
-        icon: BarChart3Icon,
+        title: "查看内容",
+        description: "应用会创建一个新窗口显示选定区域的实时内容，可使用标尺、网格等工具。",
+        icon: RulerIcon,
     },
 ] as const;
 
 export const FEATURES = [
     {
-        title: "Link shortening",
-        description: "Create short links that are easy to remember and share.",
+        title: "区域选择",
+        description: "灵活拖拽选择任意屏幕区域，支持 8 方向调整。",
     },
     {
-        title: "Advanced analytics",
-        description: "Track and measure the performance of your links.",
+        title: "实时预览",
+        description: "实时显示选定区域内容，支持多显示器。",
     },
     {
-        title: "Password protection",
-        description: "Secure your links with a password.",
+        title: "缩放功能",
+        description: "支持 0.5x - 10x 缩放，鼠标手势缩放。",
     },
     {
-        title: "Custom QR codes",
-        description: "Generate custom QR codes for your links.",
+        title: "标尺与辅助线",
+        description: "可开关的水平/垂直标尺，自定义辅助线。",
     },
     {
-        title: "Link expiration",
-        description: "Set an expiration date for your links.",
+        title: "网格显示",
+        description: "可自定义颜色和线宽的网格显示。",
     },
     {
-        title: "Team collaboration",
-        description: "Share links with your team and collaborate in real-time.",
+        title: "窗口置顶",
+        description: "将窗口置顶/取消置顶，方便查看。",
     },
 ] as const;

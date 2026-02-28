@@ -1,40 +1,37 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { cn } from "@/utils";
-import { ArrowRightIcon, CalendarIcon, Link2Icon, SearchIcon, WaypointsIcon } from "lucide-react";
+import { ArrowRightIcon, Maximize2Icon, RulerIcon, Grid3X3Icon, PinIcon, ZoomInIcon } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
 import { Input } from "./input";
-import { Integrations } from "./integrations";
 import { Label } from "./label";
 
 export const CARDS = [
     {
-        Icon: Link2Icon,
-        name: "Shorten links",
-        description: "Create short links that are easy to remember and share.",
+        Icon: Maximize2Icon,
+        name: "区域选择与实时预览",
+        description: "灵活拖拽选择任意屏幕区域，支持 8 方向调整大小和移动，实时显示选定区域内容。",
         href: "#",
-        cta: "Learn more",
+        cta: "了解更多",
         className: "col-span-3 lg:col-span-1",
         background: (
             <Card className="absolute top-10 left-10 origin-top rounded-none rounded-tl-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_100%)] group-hover:scale-105 border border-border border-r-0">
                 <CardHeader>
                     <CardTitle>
-                        Create short links
+                        区域选择
                     </CardTitle>
                     <CardDescription>
-                        Create short links that are easy to remember and share.
+                        灵活拖拽选择任意屏幕区域
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="-mt-4">
                     <Label>
-                        Paste your link
+                        屏幕捕获
                     </Label>
                     <Input
                         type="text"
-                        placeholder="Paste your link here..."
+                        placeholder="选择屏幕区域..."
                         className="w-full focus-visible:ring-0 focus-visible:ring-transparent"
                     />
                 </CardContent>
@@ -42,50 +39,84 @@ export const CARDS = [
         ),
     },
     {
-        Icon: SearchIcon,
-        name: "Search your links",
-        description: "Quickly find the links you need with AI-powered search.",
+        Icon: ZoomInIcon,
+        name: "缩放与导航",
+        description: "支持 0.5x - 10x 缩放，鼠标手势缩放，实时显示缩放级别和视口位置。",
         href: "#",
-        cta: "Learn more",
+        cta: "了解更多",
         className: "col-span-3 lg:col-span-2",
         background: (
-            <Command className="absolute right-10 top-10 w-[70%] origin-to translate-x-0 border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10 p-2">
-                <Input placeholder="Type to search..." />
-                <div className="mt-1 cursor-pointer">
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/hdf00c</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/sdv0n0</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/03gndo</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/09vmmw</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/s09vws</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/sd8fv5</div>
-                </div>
-            </Command>
+            <Card className="absolute right-10 top-10 w-[70%] origin-to translate-x-0 border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10 p-2">
+                <CardHeader>
+                    <CardTitle>
+                        缩放控制
+                    </CardTitle>
+                    <CardDescription>
+                        0.5x - 10x 无级缩放
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="-mt-4">
+                    <div className="flex items-center gap-2">
+                        <div className="px-4 py-2 bg-muted rounded-md">1x</div>
+                        <div className="px-4 py-2 bg-primary/10 rounded-md">2x</div>
+                        <div className="px-4 py-2 bg-muted rounded-md">5x</div>
+                        <div className="px-4 py-2 bg-muted rounded-md">10x</div>
+                    </div>
+                </CardContent>
+            </Card>
         ),
     },
     {
-        Icon: WaypointsIcon,
-        name: "Connect your apps",
-        description: "Integrate with your favorite apps and services.",
+        Icon: RulerIcon,
+        name: "设计辅助工具",
+        description: "可开关的水平/垂直标尺，自定义辅助线，辅助线位置调整和删除。",
         href: "#",
-        cta: "Learn more",
+        cta: "了解更多",
         className: "col-span-3 lg:col-span-2 max-w-full overflow-hidden",
         background: (
-            <Integrations className="absolute right-2 pl-28 md:pl-0 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+            <Card className="absolute right-2 pl-28 md:pl-0 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105">
+                <CardHeader>
+                    <CardTitle>
+                        标尺与辅助线
+                    </CardTitle>
+                    <CardDescription>
+                        专业的设计辅助工具
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="-mt-4">
+                    <div className="flex items-center gap-4">
+                        <div className="px-4 py-2 bg-primary/10 rounded-md">📐 标尺</div>
+                        <div className="px-4 py-2 bg-muted rounded-md">📏 辅助线</div>
+                        <div className="px-4 py-2 bg-muted rounded-md">🎨 颜色</div>
+                    </div>
+                </CardContent>
+            </Card>
         ),
     },
     {
-        Icon: CalendarIcon,
-        name: "Calendar",
-        description: "Keep track of your links with our calendar view.",
+        Icon: PinIcon,
+        name: "便捷操作",
+        description: "轻量级菜单栏应用，快捷键快速启动，ESC 键快速关闭选择覆盖层。",
         className: "col-span-3 lg:col-span-1",
         href: "#",
-        cta: "Learn more",
+        cta: "了解更多",
         background: (
-            <Calendar
-                mode="single"
-                selected={new Date(2022, 4, 11, 0, 0, 0)}
-                className="absolute right-0 top-10 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
-            />
+            <Card className="absolute right-0 top-10 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105">
+                <CardHeader>
+                    <CardTitle>
+                        快捷操作
+                    </CardTitle>
+                    <CardDescription>
+                        高效的工作流程
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="-mt-4">
+                    <div className="space-y-2">
+                        <div className="px-3 py-1 bg-muted rounded text-sm">Cmd+Ctrl+P</div>
+                        <div className="px-3 py-1 bg-muted rounded text-sm">ESC 关闭</div>
+                    </div>
+                </CardContent>
+            </Card>
         ),
     },
 ];

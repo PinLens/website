@@ -1,42 +1,42 @@
-import { HelpCircleIcon, LineChartIcon, Link2Icon, LockIcon, NewspaperIcon, QrCodeIcon } from "lucide-react";
+import { HelpCircleIcon, RulerIcon, Maximize2Icon, ZoomInIcon, Grid3X3Icon, PinIcon } from "lucide-react";
 
 export const NAV_LINKS = [
     {
-        title: "Features",
+        title: "功能",
         href: "/features",
         menu: [
             {
-                title: "Link Shortening",
-                tagline: "Shorten links and track their performance.",
-                href: "/features/link-shortening",
-                icon: Link2Icon,
+                title: "区域选择",
+                tagline: "灵活拖拽选择任意屏幕区域，支持 8 方向调整。",
+                href: "/features/area-selection",
+                icon: Maximize2Icon,
             },
             {
-                title: "Password Protection",
-                tagline: "Secure your links with a password.",
-                href: "/features/password-protection",
-                icon: LockIcon,
+                title: "缩放功能",
+                tagline: "支持 0.5x - 10x 缩放，鼠标手势缩放。",
+                href: "/features/zoom",
+                icon: ZoomInIcon,
             },
             {
-                title: "Advanced Analytics",
-                tagline: "Gain insights into who is clicking your links.",
-                href: "/features/analytics",
-                icon: LineChartIcon,
+                title: "标尺与辅助线",
+                tagline: "可开关的水平/垂直标尺，自定义辅助线。",
+                href: "/features/rulers",
+                icon: RulerIcon,
             },
             {
-                title: "Custom QR Codes",
-                tagline: "Use QR codes to reach your audience.",
-                href: "/features/qr-codes",
-                icon: QrCodeIcon,
+                title: "网格显示",
+                tagline: "可自定义颜色和线宽的网格显示。",
+                href: "/features/grid",
+                icon: Grid3X3Icon,
             },
         ],
     },
     {
-        title: "Pricing",
-        href: "/pricing",
+        title: "下载",
+        href: "#",
     },
     {
-        title: "Changelog",
+        title: "更新日志",
         href: "/changelog",
     },
 ];

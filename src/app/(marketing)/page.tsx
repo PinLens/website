@@ -1,4 +1,4 @@
-import { AnimationContainer, MaxWidthWrapper, PricingCards } from "@/components";
+import { AnimationContainer, MaxWidthWrapper } from "@/components";
 import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
@@ -6,12 +6,11 @@ import { LampContainer } from "@/components/ui/lamp";
 import MagicBadge from "@/components/ui/magic-badge";
 import MagicCard from "@/components/ui/magic-card";
 import { COMPANIES, PROCESS } from "@/utils";
-import { ArrowRightIcon, CreditCardIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const HomePage = () => {
-
     return (
         <div className="overflow-x-hidden scrollbar-hide size-full">
             {/* Hero Section */}
@@ -25,24 +24,24 @@ const HomePage = () => {
                             <span className="backdrop absolute inset-[1px] rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
                             <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/20"></span>
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1">
-                                ✨ Manage links smarter
+                                ✨ macOS 屏幕区域捕获工具
                                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                             </span>
                         </button>
                         <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-                            Smart Links with <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                                Precision
+                            屏幕区域捕获与 <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
+                                实时查看
                             </span>
                         </h1>
                         <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
-                            Effortlessly streamline your link management with PinLens.
+                            Pinlens 是一款强大的 macOS 屏幕区域捕获和实时查看应用。
                             <br className="hidden md:block" />
-                            <span className="hidden md:block">Shorten, track, and organize all your links in one place.</span>
+                            <span className="hidden md:block">支持缩放、标尺、网格、辅助线等多种专业辅助工具。</span>
                         </p>
                         <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
                             <Button asChild>
-                                <Link href="/dashboard" className="flex items-center">
-                                    Start creating for free
+                                <Link href="#" className="flex items-center">
+                                    立即下载
                                     <ArrowRightIcon className="w-4 h-4 ml-2" />
                                 </Link>
                             </Button>
@@ -78,7 +77,7 @@ const HomePage = () => {
                     <div className="py-14">
                         <div className="mx-auto px-4 md:px-8">
                             <h2 className="text-center text-sm font-medium font-heading text-neutral-400 uppercase">
-                                Trusted by the best in the industry
+                                受到设计师和开发者的喜爱
                             </h2>
                             <div className="mt-8">
                                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
@@ -105,12 +104,12 @@ const HomePage = () => {
             <MaxWidthWrapper className="pt-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-                        <MagicBadge title="Features" />
+                        <MagicBadge title="核心功能" />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Manage Links Like a Pro
+                            专业的屏幕捕获工具
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            PinLens is a powerful link management tool that helps you shorten, track, and organize all your links in one place.
+                            Pinlens 提供强大的屏幕区域捕获和实时预览功能，是 UI 设计、开发调试、内容创作的得力助手。
                         </p>
                     </div>
                 </AnimationContainer>
@@ -127,12 +126,12 @@ const HomePage = () => {
             <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="The Process" />
+                        <MagicBadge title="使用流程" />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Effortless link management in 3 steps
+                            简单 3 步开始使用
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Follow these simple steps to optimize, organize, and share your links with ease.
+                            按照这些简单步骤，轻松开始使用 Pinlens 进行屏幕捕获和实时预览。
                         </p>
                     </div>
                 </AnimationContainer>
@@ -160,30 +159,39 @@ const HomePage = () => {
                 </div>
             </MaxWidthWrapper>
 
-            {/* Pricing Section */}
+            {/* System Requirements Section */}
             <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="Simple Pricing" />
+                        <MagicBadge title="系统要求" />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Choose a plan that works for you
+                            为 macOS 设计
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Get started with PinLens today and enjoy more features with our pro plans.
+                            Pinlens 专为 macOS Sonoma (15.0+) 设计，需要屏幕录制权限以提供最佳体验。
                         </p>
                     </div>
                 </AnimationContainer>
                 <AnimationContainer delay={0.2}>
-                    <PricingCards />
-                </AnimationContainer>
-                <AnimationContainer delay={0.3}>
-                    <div className="flex flex-wrap items-start md:items-center justify-center lg:justify-evenly gap-6 mt-12 max-w-5xl mx-auto w-full">
-                        <div className="flex items-center gap-2">
-                            <CreditCardIcon className="w-5 h-5 text-foreground" />
-                            <span className="text-muted-foreground">
-                                No credit card required
-                            </span>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 max-w-3xl mx-auto">
+                        <MagicCard className="group">
+                            <div className="flex flex-col items-start justify-center w-full">
+                                <div className="text-4xl mb-4">🍎</div>
+                                <h3 className="text-xl font-medium text-foreground">macOS 15.0+</h3>
+                                <p className="mt-2 text-sm text-muted-foreground">
+                                    需要 Sonoma 或更高版本
+                                </p>
+                            </div>
+                        </MagicCard>
+                        <MagicCard className="group">
+                            <div className="flex flex-col items-start justify-center w-full">
+                                <div className="text-4xl mb-4">🎯</div>
+                                <h3 className="text-xl font-medium text-foreground">屏幕录制权限</h3>
+                                <p className="mt-2 text-sm text-muted-foreground">
+                                    首次启动时需要授予权限
+                                </p>
+                            </div>
+                        </MagicCard>
                     </div>
                 </AnimationContainer>
             </MaxWidthWrapper>
@@ -194,14 +202,14 @@ const HomePage = () => {
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
                             <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                                Step into the future of link management
+                                开始使用 Pinlens
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Experience the cutting-edge solution that transforms how you handle your links. Elevate your online presence with our next-gen platform.
+                                体验这款专为 macOS 设计的屏幕区域捕获工具，让 UI 设计、开发调试、内容创作变得更加高效。
                             </p>
                             <div className="mt-6">
                                 <Button>
-                                    Get started for free
+                                    立即下载
                                     <ArrowRightIcon className="w-4 h-4 ml-2" />
                                 </Button>
                             </div>
