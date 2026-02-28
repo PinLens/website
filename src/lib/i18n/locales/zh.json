@@ -49,7 +49,7 @@
     "badge": "✨ MacOS 屏幕实时预览及缩放工具",
     "title": "屏幕实时预览与",
     "titleHighlight": "测量缩放",
-    "description": "Pinlens 是一款专为 MacOS 打造的专业级屏幕区域捕获与实时预览工具。",
+    "description": "Pinlens 是一款专为 MacOS 打造的专业级实时预览工具。",
     "descriptionExtended": "内置多级缩放、标尺、网格系统、辅助线等专业辅助工具，助力高效工作。",
     "downloadNow": "立即下载"
   },
@@ -90,7 +90,7 @@
   "process": {
     "badge": "使用流程",
     "title": "简单 3 步开始使用",
-    "description": "按照这些简单步骤，轻松开始使用 Pinlens 进行屏幕捕获和实时预览。",
+    "description": "按照这些简单步骤，轻松开始使用 Pinlens 进行实时预览及测量缩放。",
     "step1": {
       "title": "启动应用",
       "description": "应用启动后会在菜单栏显示图标，点击或按 Cmd+Ctrl+P 快速启动。"

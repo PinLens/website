@@ -49,7 +49,7 @@
     "badge": "✨ macOS Screen Real-time Preview & Measurement Tool",
     "title": "Screen Real-time Preview &",
     "titleHighlight": "Measurement Zoom",
-    "description": "Pinlens is a professional-grade screen area capture and real-time preview tool built for macOS.",
+    "description": "Pinlens is a professional-grade real-time preview tool built for macOS.",
     "descriptionExtended": "Built-in multi-level zoom, rulers, grid system, guides and other professional auxiliary tools to boost productivity.",
     "downloadNow": "Download Now"
   },
@@ -90,7 +90,7 @@
   "process": {
     "badge": "Workflow",
     "title": "Get Started in 3 Simple Steps",
-    "description": "Follow these simple steps to easily start using Pinlens for screen capture and real-time preview.",
+    "description": "Follow these simple steps to easily start using Pinlens for real-time preview and measurement zoom.",
     "step1": {
       "title": "Launch App",
       "description": "After launching, the app will display an icon in the menu bar, click or press Cmd+Ctrl+P to launch quickly."

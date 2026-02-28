@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const generateMetadata = ({
-    title = `${process.env.NEXT_PUBLIC_APP_NAME} - The Link Management Platform for Businesses`,
-    description = `${process.env.NEXT_PUBLIC_APP_NAME} is the link management platform for businesses. It helps you build, brand, and track your links.`,
+    title = `${process.env.NEXT_PUBLIC_APP_NAME} - 屏幕区域实时预览工具`,
+    description = `${process.env.NEXT_PUBLIC_APP_NAME} 是一款强大的 macOS 屏幕区域实时预览工具，允许你选择屏幕上的任意区域并在独立窗口中实时显示该区域的内容。支持缩放、标尺、网格、辅助线等多种专业辅助工具，是 UI 设计、开发调试、内容创作的得力助手。`,
     image = "/thumbnail.png",
     icons = [
         {
