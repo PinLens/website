@@ -12,7 +12,7 @@ const TermsPage = () => {
                     Last updated: 17th June 2024
                 </p>
                 <p className="mt-4">
-                    Welcome to PinLens. These terms and conditions outline's rules and regulations for's use of PinLens&apos;s website and services.
+                    Welcome to PinLens. These terms and conditions outline the rules and regulations for the use of PinLens&apos;s website and services.
                 </p>
 
                 <h2 className="text-xl font-medium mt-8">

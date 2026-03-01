@@ -5,6 +5,9 @@ import { Locale, defaultLocale, locales } from './config';
 import enTranslations from './locales/en.json';
 import zhTranslations from './locales/zh.json';
 
+export type { Locale } from './config';
+export { defaultLocale, locales } from './config';
+
 interface I18nContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
